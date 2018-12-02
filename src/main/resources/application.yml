@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /love
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    sqlite:
+      driver-class-name: org.sqlite.JDBC
+      jdbc-url: jdbc:sqlite::resource:sqlite/data.db
+      username:
+      password:
+    pg:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://127.0.0.1:5432/ssop
+      username: ssop
+      password: ssop
+mybatis:
+#  mapper-locations: classpath:mapping/**/*.xml
+  type-aliases-package: com.changsheng.love.model
